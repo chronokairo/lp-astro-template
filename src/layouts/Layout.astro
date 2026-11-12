@@ -10,28 +10,37 @@ interface Props {
 
 const {
   title = 'AgentCall',
-  description = 'Turn any AI agent into a meeting teammate. Real-time transcription, voice intelligence, and audit logging for Google Meet, Microsoft Teams, and Zoom.',
+  description = 'AgentCall is the skill that turns AI agents into teammates who join video meetings on Google Meet, Zoom, and Microsoft Teams.',
   image = '/og-image.png',
   pathname = '/',
 } = Astro.props;
 
-const siteUrl = 'https://chronokairo.github.io';
+const siteUrl = 'https://chronokairo.github.io/lp-astro-template/';
 const fullUrl = `${siteUrl}${pathname}`;
 const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 ---
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#0f172a" />
+    <meta name="theme-color" content="#f3f0e8" />
 
     <title>{title}</title>
+
+    <!-- Google Fonts (same as agentcall.dev) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -41,7 +50,7 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
     <meta property="og:image" content={fullImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="AgentCall" />
 
     <!-- Twitter -->
@@ -57,6 +66,9 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
     <is-refresh />
   </head>
   <body>
-    <slot />
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <main id="main">
+      <slot />
+    </main>
   </body>
 </html>

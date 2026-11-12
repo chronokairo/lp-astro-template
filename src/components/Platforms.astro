@@ -1,35 +1,39 @@
-<section id="plataformas" class="py-24 bg-slate-50/50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Plataformas suportadas</h2>
-      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
-        O AgentCall se integra nativamente às principais ferramentas de videoconferência.
+<section id="platforms" class="section" style="padding:120px 0; position:relative;">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:60px; max-width:760px;">
+      <span class="section-label" style="font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.22em; color:var(--muted); display:inline-flex; align-items:center; gap:12px; margin-bottom:24px; background:var(--lime); border:1.5px solid var(--lime); border-radius:6px; box-shadow:3px 3px 0 var(--lime); color:var(--ink); transform:rotate(-1deg);">
+        <span style="display:block; width:28px; height:1px; background:var(--ink);"></span>
+        05 · Works everywhere
+      </span>
+      <h2 class="section-title" style="font-size:clamp(34px, 5vw, 64px); font-weight:700; line-height:1.02; letter-spacing:-0.04em; margin-bottom:18px;">
+        One skill for <span class="serif" style="font-family:var(--serif); font-weight:400; letter-spacing:-0.02em; font-style:italic;">every</span> platform &amp; framework.
+      </h2>
+      <p class="section-sub" style="font-size:clamp(16px, 1.3vw, 18px); color:var(--muted); max-width:60ch; margin:0; line-height:1.55;">
+        AgentCall works with the meeting platforms your team uses, the agent frameworks developers build with, and the languages they already know.
       </p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm text-center">
-        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6 text-blue-600">
-          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.89 2 2 2h12l3-3 3-3V4c-.01-1.1-.99-2-1.99-2zM18 16H6v-2h12v2zM8 9H6v2h2V9zM16 11h-2V7h2v4zM19 14h-2v-2h2v2zM6 7h2V5H6v2zM19 7h-2V5h2v2z"/></svg>
-        </div>
-        <h3 class="text-xl font-bold text-slate-900 mb-2">Google Meet</h3>
-        <p class="text-slate-600 text-sm">Integração direta via Google Workspace.</p>
+    <div class="platforms-grid" style="display:grid; grid-template-columns:1fr; gap:36px; background:rgba(255,255,255,0.12); border-radius:var(--radius-lg); padding:40px;">
+      <div class="platform-col" style="transform:rotate(-0.2deg);">
+        <h3 style="font-size:24px; font-weight:700; margin-bottom:16px; letter-spacing:-0.025em;">Meeting platforms</h3>
+        <ul style="list-style:none; padding:0; margin:0; display:grid; gap:10px;">
+          <li style="font-size:16px; color:var(--ink); padding:12px 16px; background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius-sm);">Google Meet</li>
+          <li style="font-size:16px; color:var(--ink); padding:12px 16px; background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius-sm);">Microsoft Teams</li>
+          <li style="font-size:16px; color:var(--ink); padding:12px 16px; background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius-sm);">Zoom</li>
+        </ul>
       </div>
-
-      <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm text-center">
-        <div class="w-16 h-16 bg-indigo-100 rounded-xl flex items-center justify-center mx-auto mb-6 text-indigo-600">
-          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-4 6h-2v-3h2v3zm0 4h-2v-4h2v4zm-7-6V5h2v6h2V8h2V6h-4V4h-2v2z"/></svg>
-        </div>
-        <h3 class="text-xl font-bold text-slate-900 mb-2">Microsoft Teams</h3>
-        <p class="text-slate-600 text-sm">Conecte via Microsoft 365 e Teams.</p>
-      </div>
-
-      <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm text-center">
-        <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6 text-white">
-          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 3.557 6.864 5.675 11.554 5.14-1.002.607-1.795.997-2.227 1.351-.716-1.565-1.05-3.309-.893-5.077-1.293.59-2.602.95-4.056.95-1.323 0-2.633-.263-3.821-.756 1.317 4.108 5.16 7.093 9.741 7.391-1.329.36-2.739.56-4.162.577-3.518 0-6.46-2.431-7.193-5.744.717.41 1.547.65 2.427.65q-.214.055-.428.105c-.436 0-.858-.073-1.283-.196C3.59 20.71 7.733 22 12 22c6.617 0 12-5.373 12-12 0-.207-.006-.414-.015-.618 1.002-.596 1.868-1.447 2.442-2.5z"/></svg>
-        </div>
-        <h3 class="text-xl font-bold text-slate-900 mb-2">Zoom</h3>
-        <p class="text-slate-600 text-sm">Integração com Zoom Meetings e Zoom Rooms.</p>
+      <div class="platform-col" style="transform:rotate(0.3deg);">
+        <h3 style="font-size:24px; font-weight:700; margin-bottom:16px; letter-spacing:-0.025em;">Agent frameworks</h3>
+        <ul style="list-style:none; padding:0; margin:0; display:grid; gap:10px;">
+          <li style="font-size:16px; color:var(--ink); padding:12px 16px; background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius-sm);">Claude Code</li>
+          <li style="font-size:16px; color:var(--ink); padding:12px 16px; background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius-sm);">OpenAI Codex</li>
+          <li style="font-size:16px; color:var(--ink); padding:12px 16px; background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius-sm);">Cursor</li>
+          <li style="font-size:16px; color:var(--ink); padding:12px 16px; background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius-sm);">Gemini CLI</li>
+          <li style="font-size:16px; color:var(--ink); padding:12px 16px; background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius-sm);">Windsurf</li>
+          <li style="font-size:16px; color:var(--ink); padding:12px 16px; background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius-sm);">GitHub Copilot</li>
+          <li style="font-size:16px; color:var(--ink); padding:12px 16px; background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius-sm);">JetBrains Junie</li>
+          <li style="font-size:16px; color:var(--ink); padding:12px 16px; background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius-sm);">OpenClaw</li>
+        </ul>
       </div>
     </div>
   </div>
