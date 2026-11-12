@@ -2,32 +2,53 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
+import Marquee from '../components/Marquee.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import Modes from '../components/Modes.astro';
 import Capabilities from '../components/Capabilities.astro';
+import Awareness from '../components/Awareness.astro';
 import Privacy from '../components/Privacy.astro';
 import Platforms from '../components/Platforms.astro';
+import Tunnel from '../components/Tunnel.astro';
+import UseCases from '../components/UseCases.astro';
 import Pricing from '../components/Pricing.astro';
 import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout
-  title="AgentCall — Transforme qualquer agente de IA em um colega de reunião"
-  description="Transcrição em tempo real, inteligência de voz e log de auditoria para Google Meet, Microsoft Teams e Zoom. Conecte seus agentes de IA às suas reuniões."
+  title="AgentCall — Turn any AI agent into a meeting teammate"
+  description="AgentCall is the skill that turns AI agents into teammates who join video meetings on Google Meet, Zoom, and Microsoft Teams."
   pathname="/"
   image="/og-image.png"
 >
   <Nav />
 
   <Hero />
+  <Marquee />
+  <div class="section-divider" />
   <HowItWorks />
+  <div class="section-divider" />
   <Modes />
+  <div class="section-divider" />
   <Capabilities />
+  <div class="section-divider" />
+  <Awareness />
+  <div class="section-divider" />
   <Privacy />
+  <div class="section-divider" />
   <Platforms />
+  <div class="section-divider" />
+  <Tunnel />
+  <div class="section-divider" />
+  <UseCases />
+  <div class="section-divider" />
   <Pricing />
+  <div class="section-divider" />
   <FAQ />
+  <div class="section-divider" />
+  <CTA />
 
   <Footer />
 </Layout>
