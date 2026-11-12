@@ -1,0 +1,133 @@
+---
+interface Props {
+  scrolled?: boolean;
+}
+
+const { scrolled = false } = Astro.props;
+---
+
+<nav
+  class={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    scrolled
+      ? 'bg-slate-900/90 backdrop-blur-md border-b border-slate-700'
+      : 'bg-transparent'
+  }`}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0 flex items-center gap-2">
+        <svg
+          class="w-8 h-8 text-primary"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 10V3L4 14h7v7l9-11h-7z"
+          />
+        </svg>
+        <span class="font-bold text-xl tracking-tight text-slate-900 dark:text-white">
+          AgentCall
+        </span>
+      </div>
+
+      <!-- Desktop menu -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#como-funciona" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">Como funciona</a>
+        <a href="#modos" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">Modos</a>
+        <a href="#capacidades" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">Capacidades</a>
+        <a href="#privacidade" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">Privacidade de dados</a>
+        <a href="#plataformas" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">Plataformas</a>
+        <a href="#precos" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">Preços</a>
+        <a href="#faq" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">FAQ</a>
+        <a href="/blog" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">Blog</a>
+      </div>
+
+      <!-- CTAs -->
+      <div class="flex items-center gap-3">
+        <a
+          href="https://github.com/pattern-ai-labs/agentcall"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+        >
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.301 3.495.998.108-.776.417-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          GitHub
+        </a>
+        <a
+          href="https://app.agentcall.dev/login"
+          class="px-5 py-2.5 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary/90 transition-colors"
+        >
+          Começar grátis
+        </a>
+        <button class="md:hidden text-slate-600 dark:text-slate-400" id="mobile-menu-btn">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden border-t border-slate-700/50 bg-slate-900/90 backdrop-blur-md"
+    >
+      <div class="px-4 py-4 space-y-4">
+        <a href="#como-funciona" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">Como funciona</a>
+        <a href="#modos" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">Modos</a>
+        <a href="#capacidades" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">Capacidades</a>
+        <a href="#privacidade" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">Privacidade de dados</a>
+        <a href="#plataformas" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">Plataformas</a>
+        <a href="#precos" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">Preços</a>
+        <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">FAQ</a>
+        <a href="/blog" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">Blog</a>
+        <div class="pt-4 space-y-3">
+          <a
+            href="https://github.com/pattern-ai-labs/agentcall"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition-colors flex items-center gap-2"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.301 3.495.998.108-.776.417-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            GitHub
+          </a>
+          <a
+            href="https://app.agentcall.dev/login"
+            class="block w-full text-center px-5 py-2.5 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary/90 transition-colors"
+          >
+            Começar grátis
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  }
+
+  // Handle scroll for navbar blur
+  let lastScroll = 0;
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    if (nav) {
+      if (currentScroll > 50) {
+        nav.classList.add('bg-slate-900/90', 'backdrop-blur-md', 'border-b', 'border-slate-700');
+      } else {
+        nav.classList.remove('bg-slate-900/90', 'backdrop-blur-md', 'border-b', 'border-slate-700');
+      }
+    }
+    lastScroll = currentScroll;
+  });
+</script>
