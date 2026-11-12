@@ -8,13 +8,13 @@
       </span>
 
       <!-- Headline -->
-      <h1 class="hero-headline" style="font-size:clamp(40px, 6vw, 92px); font-weight:700; letter-spacing:-0.04em; line-height:0.96; max-width:none;">
+      <h1 class="hero-headline" style="font-size:clamp(40px, 6vw, 92px); font-weight:700; letter-spacing:-0.04em; line-height:0.96; max-width:none; position:relative;">
         Turn any <br />
         AI agent into a <br />
         meeting <br />
-        <span class="accent" style="position:relative; display:inline-block;">
+        <span class="accent-text" style="position:relative; display:inline-block; padding-right:2%;">
           teammate.
-          <span style="content:''; position:absolute; left:-3%; right:-3%; bottom:-2%; height:22%; background:var(--lime); z-index:-1; border-radius:8px 14px 10px 16px / 12px 8px 14px 10px; transform:skewY(-1.4deg) rotate(-0.5deg);"></span>
+          <span style="content:''; position:absolute; left:0; right:0; bottom:-4px; height:12%; width:96%; background:var(--lime); z-index:-1; border-radius:12px 12px 6px 6px; transform:skewY(-1.2deg);"></span>
         </span>
       </h1>
 
@@ -39,7 +39,7 @@
           href="https://github.com/pattern-ai-labs/agentcall"
           target="_blank"
           rel="noopener noreferrer"
-          class="btn btn-outline"
+          class="btn btn-lime"
         >
           Star on GitHub
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow">
@@ -76,65 +76,65 @@
           Audit logging
         </span>
       </div>
-    </div>
 
-    <!-- Hero visual: meeting card + live caption + terminal -->
-    <div class="hero-visual" style="position:relative; margin-top:20px;">
-      <!-- Meeting card -->
-      <div class="meeting-card" style="background:var(--bg-dark); border-radius:var(--radius-lg); padding:22px; box-shadow:var(--shadow-lg); color:#e8e6df; position:relative; overflow:hidden; transform:rotate(-0.6deg);">
-        <div class="meeting-bar" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
-          <div class="meeting-pills" style="display:flex; gap:6px;">
-            <span style="width:11px; height:11px; border-radius:50%; background:#3a3b34;"></span>
-            <span style="width:11px; height:11px; border-radius:50%; background:#ff5f57;"></span>
-            <span style="width:11px; height:11px; border-radius:50%; background:#febc2e;"></span>
-            <span style="width:11px; height:11px; border-radius:50%; background:#28c840;"></span>
+      <!-- Hero visual: meeting card + live caption + terminal -->
+      <div class="hero-visual" style="position:relative; margin-top:20px;">
+        <!-- Meeting card -->
+        <div class="meeting-card" style="background:var(--bg-dark); border-radius:var(--radius-lg); padding:22px; box-shadow:var(--shadow-lg); color:#e8e6df; position:relative; overflow:hidden; transform:rotate(-0.6deg);">
+          <div class="meeting-bar" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+            <div class="meeting-pills" style="display:flex; gap:6px;">
+              <span style="width:11px; height:11px; border-radius:50%; background:#3a3b34;"></span>
+              <span style="width:11px; height:11px; border-radius:50%; background:#ff5f57;"></span>
+              <span style="width:11px; height:11px; border-radius:50%; background:#febc2e;"></span>
+              <span style="width:11px; height:11px; border-radius:50%; background:#28c840;"></span>
+            </div>
+            <div>
+              <div class="meeting-name" style="font-family:var(--mono); font-size:11px; color:#8d8a7e; letter-spacing:0.1em; text-transform:uppercase;">agentcall.dev — june</div>
+              <div class="meeting-time" style="font-family:var(--mono); font-size:11px; color:var(--lime); letter-spacing:0.08em;">00:42:15</div>
+            </div>
           </div>
+          <div class="meeting-grid" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;">
+            <div class="participant" style="aspect-ratio:4/3; border-radius:14px; background:linear-gradient(135deg, #21221c, #181913); position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:10px; border:1px solid rgba(255,255,255,0.04);">
+              <div class="avatar" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -55%); width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px; color:var(--bg); letter-spacing:-0.02em;">A</div>
+              <div class="name-tag" style="font-family:var(--mono); font-size:10px; letter-spacing:0.08em; color:#d4d2c8; background:rgba(0,0,0,0.4); padding:4px 7px; border-radius:5px; backdrop-filter:blur(4px);">Alice</div>
+            </div>
+            <div class="participant bot" style="aspect-ratio:4/3; border-radius:14px; background:linear-gradient(135deg, #1f261a 0%, #161a13 100%); position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:10px; border:1px solid rgba(200,255,58,0.45); box-shadow:0 0 0 3px rgba(200,255,58,0.12), inset 0 0 60px rgba(200,255,58,0.08);">
+              <div class="avatar" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -55%); width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px; color:var(--ink-on-lime); background:var(--lime); box-shadow:0 0 30px rgba(200,255,58,0.5); letter-spacing:-0.02em;">J</div>
+              <div class="name-tag" style="font-family:var(--mono); font-size:10px; letter-spacing:0.08em; color:#d4d2c8; background:rgba(0,0,0,0.4); padding:4px 7px; border-radius:5px; backdrop-filter:blur(4px);">June · bot</div>
+            </div>
+            <div class="participant" style="aspect-ratio:4/3; border-radius:14px; background:linear-gradient(135deg, #21221c, #181913); position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:10px; border:1px solid rgba(255,255,255,0.04);">
+              <div class="avatar" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -55%); width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px; color:var(--bg); letter-spacing:-0.02em;">B</div>
+              <div class="name-tag" style="font-family:var(--mono); font-size:10px; letter-spacing:0.08em; color:#d4d2c8; background:rgba(0,0,0,0.4); padding:4px 7px; border-radius:5px; backdrop-filter:blur(4px);">Ben</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live caption -->
+        <div class="live-caption" style="position:absolute; left:22px; right:22px; bottom:22px; background:rgba(15,17,12,0.85); backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,0.06); border-radius:14px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start; transform:translateY(0); opacity:1;">
+          <div class="badge" style="width:28px; height:28px; border-radius:8px; background:var(--lime); color:var(--ink-on-lime); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:12px; flex-shrink:0;">J</div>
           <div>
-            <div class="meeting-name" style="font-family:var(--mono); font-size:11px; color:#8d8a7e; letter-spacing:0.1em; text-transform:uppercase;">agentcall.dev — june</div>
-            <div class="meeting-time" style="font-family:var(--mono); font-size:11px; color:var(--lime); letter-spacing:0.08em;">00:42:15</div>
+            <div class="speaker" style="font-family:var(--mono); font-size:10px; letter-spacing:0.1em; color:var(--lime); text-transform:uppercase; margin-bottom:2px;">June · bot · speaking</div>
+            <div class="text" style="font-size:13px; color:#f3f0e8; line-height:1.4;">Q3 revenue came in at 2.4 million, that's 15% up year over year.</div>
           </div>
         </div>
-        <div class="meeting-grid" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;">
-          <div class="participant" style="aspect-ratio:4/3; border-radius:14px; background:linear-gradient(135deg, #21221c, #181913); position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:10px; border:1px solid rgba(255,255,255,0.04);">
-            <div class="avatar" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -55%); width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px; color:var(--bg); letter-spacing:-0.02em;">A</div>
-            <div class="name-tag" style="font-family:var(--mono); font-size:10px; letter-spacing:0.08em; color:#d4d2c8; background:rgba(0,0,0,0.4); padding:4px 7px; border-radius:5px; backdrop-filter:blur(4px);">Alice</div>
-          </div>
-          <div class="participant bot" style="aspect-ratio:4/3; border-radius:14px; background:linear-gradient(135deg, #1f261a 0%, #161a13 100%); position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:10px; border:1px solid rgba(200,255,58,0.45); box-shadow:0 0 0 3px rgba(200,255,58,0.12), inset 0 0 60px rgba(200,255,58,0.08);">
-            <div class="avatar" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -55%); width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px; color:var(--ink-on-lime); background:var(--lime); box-shadow:0 0 30px rgba(200,255,58,0.5); letter-spacing:-0.02em;">J</div>
-            <div class="name-tag" style="font-family:var(--mono); font-size:10px; letter-spacing:0.08em; color:#d4d2c8; background:rgba(0,0,0,0.4); padding:4px 7px; border-radius:5px; backdrop-filter:blur(4px);">June · bot</div>
-          </div>
-          <div class="participant" style="aspect-ratio:4/3; border-radius:14px; background:linear-gradient(135deg, #21221c, #181913); position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:10px; border:1px solid rgba(255,255,255,0.04);">
-            <div class="avatar" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -55%); width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px; color:var(--bg); letter-spacing:-0.02em;">B</div>
-            <div class="name-tag" style="font-family:var(--mono); font-size:10px; letter-spacing:0.08em; color:#d4d2c8; background:rgba(0,0,0,0.4); padding:4px 7px; border-radius:5px; backdrop-filter:blur(4px);">Ben</div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Live caption -->
-      <div class="live-caption" style="position:absolute; left:22px; right:22px; bottom:22px; background:rgba(15,17,12,0.85); backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,0.06); border-radius:14px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start; transform:translateY(0); opacity:1;">
-        <div class="badge" style="width:28px; height:28px; border-radius:8px; background:var(--lime); color:var(--ink-on-lime); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:12px; flex-shrink:0;">J</div>
-        <div>
-          <div class="speaker" style="font-family:var(--mono); font-size:10px; letter-spacing:0.1em; color:var(--lime); text-transform:uppercase; margin-bottom:2px;">June · bot · speaking</div>
-          <div class="text" style="font-size:13px; color:#f3f0e8; line-height:1.4;">Q3 revenue came in at 2.4 million, that's 15% up year over year.</div>
-        </div>
-      </div>
-
-      <!-- Terminal -->
-      <div class="terminal" style="background:var(--bg-dark); border-radius:var(--radius); padding:0; overflow:hidden; box-shadow:var(--shadow-md); border:1px solid var(--line-dark); position:absolute; right:-10px; bottom:-30px; width:380px; transform:rotate(2deg); z-index:3;">
-        <div class="term-head" style="display:flex; align-items:center; gap:8px; padding:10px 14px; background:#0a0b08; border-bottom:1px solid var(--line-dark);">
-          <div class="dots" style="display:flex; gap:5px;">
-            <span style="width:9px; height:9px; border-radius:50%; background:#ff5f57;"></span>
-            <span style="width:9px; height:9px; border-radius:50%; background:#febc2e;"></span>
-            <span style="width:9px; height:9px; border-radius:50%; background:#28c840;"></span>
+        <!-- Terminal -->
+        <div class="terminal" style="background:var(--bg-dark); border-radius:var(--radius); padding:0; overflow:hidden; box-shadow:var(--shadow-md); border:1px solid var(--line-dark); position:absolute; right:-10px; bottom:-30px; width:380px; transform:rotate(2deg); z-index:3;">
+          <div class="term-head" style="display:flex; align-items:center; gap:8px; padding:10px 14px; background:#0a0b08; border-bottom:1px solid var(--line-dark);">
+            <div class="dots" style="display:flex; gap:5px;">
+              <span style="width:9px; height:9px; border-radius:50%; background:#ff5f57;"></span>
+              <span style="width:9px; height:9px; border-radius:50%; background:#febc2e;"></span>
+              <span style="width:9px; height:9px; border-radius:50%; background:#28c840;"></span>
+            </div>
+            <div class="title" style="font-family:var(--mono); font-size:11px; color:#6c6a60; margin-left:6px;">agentcall</div>
           </div>
-          <div class="title" style="font-family:var(--mono); font-size:11px; color:#6c6a60; margin-left:6px;">agentcall</div>
-        </div>
-        <div class="term-body" id="termBody" style="font-family:var(--mono); font-size:12.5px; line-height:1.65; color:#c8ccc1; padding:14px 16px; min-height:220px; max-height:280px; overflow:hidden;">
-          <div class="term-line" style="white-space:pre-wrap; word-break:break-word;">
-            <span class="prompt" style="color:var(--lime);">$</span> pip install agentcall
-          </div>
-          <div class="term-line cursor-blink" style="white-space:pre-wrap; word-break:break-word;">
-            <span class="ok" style="color:var(--lime);">✓</span> installed agentcall-1.2.0
+          <div class="term-body" id="termBody" style="font-family:var(--mono); font-size:12.5px; line-height:1.65; color:#c8ccc1; padding:14px 16px; min-height:220px; max-height:280px; overflow:hidden;">
+            <div class="term-line" style="white-space:pre-wrap; word-break:break-word;">
+              <span class="prompt" style="color:var(--lime);">$</span> pip install agentcall
+            </div>
+            <div class="term-line cursor-blink" style="white-space:pre-wrap; word-break:break-word;">
+              <span class="ok" style="color:var(--lime);">✓</span> installed agentcall-1.2.0
+            </div>
           </div>
         </div>
       </div>
@@ -147,14 +147,14 @@
   const lines = [
     { html: '<span class="prompt" style="color:var(--lime);">$</span> pip install agentcall' },
     { html: '<span class="ok" style="color:var(--lime);">✓</span> installed agentcall-1.2.0', delay: 500 },
-    { html: '<span class="prompt" style="color:var(--lime);">&gt;&gt;&gt;</span> <span class="kw" style="color:#ff9b75;">import</span> <span class="var" style="color:#c0c4b8;">agentcall</span>', delay: 350 },
-    { html: '<span class="prompt" style="color:var(--lime);">&gt;&gt;&gt;</span> <span class="var" style="color:#c0c4b8;">client</span> = <span class="fn" style="color:#b3e36a;">agentcall.Client</span>(<span class="str" style="color:#f4d27c;">"ak_ac_…"</span>)', delay: 300 },
-    { html: '<span class="prompt" style="color:var(--lime);">&gt;&gt;&gt;</span> <span class="var" style="color:#c0c4b8;">call</span> = <span class="fn" style="color:#b3e36a;">client.calls.create</span>(', delay: 350 },
+    { html: '<span class="prompt" style="color:var(--lime);">>>></span> <span class="kw" style="color:#ff9b75;">import</span> <span class="var" style="color:#c0c4b8;">agentcall</span>', delay: 350 },
+    { html: '<span class="prompt" style="color:var(--lime);">>>></span> <span class="var" style="color:#c0c4b8;">client</span> = <span class="fn" style="color:#b3e36a;">agentcall.Client</span>(<span class="str" style="color:#f4d27c;">"ak_ac_…"</span>)', delay: 300 },
+    { html: '<span class="prompt" style="color:var(--lime);">>>></span> <span class="var" style="color:#c0c4b8;">call</span> = <span class="fn" style="color:#b3e36a;">client.calls.create</span>(', delay: 350 },
     { html: '<span class="out" style="color:#d4d2c8;">      </span>meet_url=<span class="str" style="color:#f4d27c;">"meet.google.com/abc"</span>,', delay: 250 },
     { html: '<span class="out" style="color:#d4d2c8;">      </span>bot_name=<span class="str" style="color:#f4d27c;">"June"</span>, mode=<span class="str" style="color:#f4d27c;">"audio"</span>)', delay: 250 },
     { html: '<span class="ok" style="color:var(--lime);">✓</span> <span class="out" style="color:#d4d2c8;">June joined the meeting</span>', delay: 700 },
     { html: '<span class="speaker" style="color:#8cb5ff;">[Alice]</span> <span class="out" style="color:#d4d2c8;">"What were Q3 revenue numbers?"</span>', delay: 900 },
-    { html: '<span class="prompt" style="color:var(--lime);">&gt;&gt;&gt;</span> <span class="fn" style="color:#b3e36a;">client.calls.inject</span>(', delay: 500 },
+    { html: '<span class="prompt" style="color:var(--lime);">>>></span> <span class="fn" style="color:#b3e36a;">client.calls.inject</span>(', delay: 500 },
     { html: '<span class="out" style="color:#d4d2c8;">      </span>text=<span class="str" style="color:#f4d27c;">"Q3 came in at $2.4M, +15%"</span>)', delay: 250 },
     { html: '<span class="ok" style="color:var(--lime);">✓</span> <span class="out" style="color:#d4d2c8;">June is speaking…</span>', delay: 700 },
   ];
