@@ -24,7 +24,7 @@ const steps = [
 <section id="how" class="section" style="padding:120px 0; position:relative;">
   <div class="container">
     <div class="section-head" style="margin-bottom:60px; max-width:760px;">
-      <span class="section-label" style="font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.22em; color:var(--muted); display:inline-flex; align-items:center; gap:12px; margin-bottom:24px; background:var(--bg-card); padding:7px 13px; border:1.5px solid var(--ink); border-radius:6px; box-shadow:3px 3px 0 var(--ink); transform:rotate(-1deg);">
+      <span class="section-label">
         <span style="display:block; width:28px; height:1px; background:var(--ink);"></span>
         01 · How it works
       </span>
@@ -37,9 +37,9 @@ const steps = [
     </div>
 
     <!-- Steps -->
-    <div class="steps" style="display:grid; grid-template-columns:1fr; gap:0; border:1px solid var(--line); border-radius:var(--radius-lg); overflow:hidden; background:var(--bg-card);">
-      {steps.map((step) => (
-        <div class="step" style="padding:36px 32px; border-bottom:1px solid var(--line); position:relative;">
+    <div class="steps" style="display:grid; grid-template-columns:1fr; gap:0; border:var(--ink-line); border-radius:var(--radius-lg); overflow:hidden; background:var(--bg-card);">
+      {steps.map((step, i) => (
+        <div class="step" style="padding:36px 32px; border-bottom:{i < steps.length - 1 ? '1px solid var(--line)' : 'none'}; position:relative;">
           <div class="step-no" style="display:inline-flex; align-items:center; gap:12px; font-family:var(--mono); font-size:12px; color:var(--muted); margin-bottom:30px; letter-spacing:0.1em;">
             <span>STEP</span> <b style="font-family:var(--sans); font-weight:700; font-size:22px; color:var(--ink);">{step.no}</b>
           </div>

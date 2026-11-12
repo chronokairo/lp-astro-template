@@ -8,56 +8,88 @@ const { scrolled = false } = Astro.props;
 
 <nav class={`nav-wrap ${scrolled ? 'scrolled' : ''}`}>
   <div class="container">
-    <div class="nav" style="display:flex; align-items:center; justify-content:space-between; gap:24px;">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:24px;">
       <!-- Logo -->
-      <a href="/" class="nav-logo" aria-label="AgentCall">
+      <a href="/" class="nav-logo" aria-label="AgentCall" style="height:44px; color:var(--ink); transition:transform 0.3s ease;">
         <svg height="44" width="auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
           <path d="M13 10V3L4 14h7v7l9-11h-7z" fill="var(--ink)"/>
         </svg>
       </a>
 
       <!-- Desktop links -->
-      <div class="nav-links" style="display:inline-flex; align-items:center; gap:4px; padding:6px; background:rgba(255,255,255,0.5); border:1px solid var(--line); border-radius:999px; backdrop-filter:blur(10px);">
-        <a href="#how" style="font-size:13.5px; font-weight:500; color:var(--ink-2); padding:8px 14px; border-radius:999px; transition:all 0.2s ease;">How it works</a>
-        <a href="#modes" style="font-size:13.5px; font-weight:500; color:var(--ink-2); padding:8px 14px; border-radius:999px; transition:all 0.2s ease;">Modes</a>
-        <a href="#capabilities" style="font-size:13.5px; font-weight:500; color:var(--ink-2); padding:8px 14px; border-radius:999px; transition:all 0.2s ease;">Capabilities</a>
-        <a href="#privacy" style="font-size:13.5px; font-weight:500; color:var(--ink-2); padding:8px 14px; border-radius:999px; transition:all 0.2s ease;">Data privacy</a>
-        <a href="#platforms" style="font-size:13.5px; font-weight:500; color:var(--ink-2); padding:8px 14px; border-radius:999px; transition:all 0.2s ease;">Platforms</a>
-        <a href="#pricing" style="font-size:13.5px; font-weight:500; color:var(--ink-2); padding:8px 14px; border-radius:999px; transition:all 0.2s ease;">Pricing</a>
-        <a href="#faq" style="font-size:13.5px; font-weight:500; color:var(--ink-2); padding:8px 14px; border-radius:999px; transition:all 0.2s ease;">FAQ</a>
-        <a href="/blog" style="font-size:13.5px; font-weight:500; color:var(--ink-2); padding:8px 14px; border-radius:999px; transition:all 0.2s ease;">Blog</a>
+      <div class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#modes">Modes</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#privacy">Data privacy</a>
+        <a href="#platforms">Platforms</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="/blog">Blog</a>
       </div>
 
       <!-- CTAs -->
       <div class="nav-cta" style="display:flex; align-items:center; gap:10px;">
-        <a href="https://github.com/pattern-ai-labs/agentcall" target="_blank" rel="noopener noreferrer" class="btn-ghost" style="display:inline-flex; font-size:13.5px; font-weight:500; color:var(--ink); padding:10px 16px;">
-          GitHub
-        </a>
-        <a href="https://app.agentcall.dev/login" class="btn btn-dark" style="display:inline-flex; align-items:center; gap:8px; padding:12px 20px; font-size:14px; font-weight:600; border-radius:999px; border:1px solid var(--ink); background:var(--ink); color:var(--bg); transition:all 0.25s cubic-bezier(0.4,0,0.2,1); letter-spacing:-0.01em; white-space:nowrap;">
-          Start free
-        </a>
+        <a href="https://github.com/pattern-ai-labs/agentcall" target="_blank" rel="noopener noreferrer" class="btn-ghost" style="display:inline-flex; font-size:13.5px; font-weight:500; color:var(--ink); padding:10px 16px;">GitHub</a>
+        <a href="https://app.agentcall.dev/login" class="btn btn-dark">Start free</a>
       </div>
+
+      <!-- Mobile toggle -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
 
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#how">How it works</a>
+  <a href="#modes">Modes</a>
+  <a href="#capabilities">Capabilities</a>
+  <a href="#privacy">Data privacy</a>
+  <a href="#platforms">Platforms</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#faq">FAQ</a>
+  <a href="/blog">Blog</a>
+  <a href="https://github.com/pattern-ai-labs/agentcall" target="_blank" rel="noopener noreferrer">GitHub</a>
+  <a href="https://app.agentcall.dev/login" style="background:var(--ink); color:var(--bg); text-align:center;">Start free</a>
+</div>
+
 <!-- Scroll progress bar -->
-<div class="scroll-bar" style="position:fixed; top:0; left:0; height:2px; background:linear-gradient(90deg, var(--lime), var(--orange)); z-index:200; width:0%; transition:width 0.05s linear;"></div>
+<div class="scroll-bar"></div>
 
 <script>
-  // Scroll for navbar blur + progress bar
   const navWrap = document.querySelector('.nav-wrap');
   const scrollBar = document.querySelector('.scroll-bar');
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('mobileMenu');
+
+  // Scroll for navbar blur + progress bar
   if (navWrap || scrollBar) {
     window.addEventListener('scroll', () => {
       const y = window.scrollY;
-      if (navWrap) {
-        navWrap.classList.toggle('scrolled', y > 40);
-      }
+      if (navWrap) navWrap.classList.toggle('scrolled', y > 40);
       if (scrollBar) {
         const max = document.documentElement.scrollHeight - window.innerHeight;
         scrollBar.style.width = max > 0 ? Math.min((y / max) * 100, 100) + '%' : '0%';
       }
     }, { passive: true });
+  }
+
+  // Mobile nav
+  if (toggle && menu) {
+    const setOpen = (open) => {
+      menu.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    };
+    toggle.addEventListener('click', () => setOpen(!menu.classList.contains('open')));
+    menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menu.classList.contains('open')) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
   }
 </script>
